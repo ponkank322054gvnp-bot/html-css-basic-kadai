@@ -1,0 +1,78 @@
+/* --- div要素（id名「top」） --- */
+#top {
+  width: 800px;
+  background-color: #dcc9f4;
+  margin: 20px auto;
+  display: flex;
+  justify-content: space-around;
+  text-align: center;
+}
+
+/* --- p要素（class名「top-child」） --- */
+.top-child {
+  width: 20%;
+  background-color: #ffd9df;
+}
+
+/* --- div要素（id名「middle」） --- */
+#middle {
+  width: 800px;
+  height: 800px;
+  margin: 20px auto;
+  background-color: #ffd9df;
+  position: relative;
+}
+
+/* --- div要素（id名「middle-child01〜03」共通） --- */
+#middle-child01,
+#middle-child02,
+#middle-child03 {
+  width: 200px;
+  height: 200px;
+  background-color: #87ceeb;
+  position: absolute;
+}
+
+/* --- div要素（id名「middle-child」個別配置） --- */
+#middle-child01 {
+  top: 100px;
+  left: 100px;
+}
+
+#middle-child02 {
+  top: 300px;
+  left: 300px;
+}
+
+#middle-child03 {
+  top: 500px;
+  left: 500px;
+}
+
+/* --- div要素（id名「bottom」） --- */
+#bottom {
+  width: 800px;
+  height: 300px;
+  margin: 20px auto;
+  background-color: #87ceeb;
+}
+
+/* --- div要素（id名「bottom-child01〜03」共通） --- */
+#bottom-child01,
+#bottom-child02,
+#bottom-child03 {
+  width: 400px;
+  height: 100px;
+  background-color: #e5dcf0;
+}
+
+/* --- div要素（id名「bottom-child」個別配置） --- */
+#bottom-child02 {
+  position: relative;
+  left: 200px;
+}
+
+#bottom-child03 {
+  position: relative;
+  left: 400px;
+}
