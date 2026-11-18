@@ -1,0 +1,136 @@
+/* PC、スマホ共通スタイル */
+body {
+   max-width: 1080px;
+   margin: 0 auto;
+   font-family: "Source Sans Pro", "Hiragino Kaku Gothic ProN", Meiryo, Arial, sans-serif;
+ }
+ 
+ /* ヘッダー */
+ header {
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   padding: 20px;
+ }
+
+ #logo img {
+   width: 150px;
+ }
+ 
+ /* PC用ナビゲーション */
+ #nav-pc {
+   font-size: 14px;
+ }
+ 
+ #nav-pc ul {
+   display: flex;
+   padding-left: 0;
+   margin: 0;
+ }
+ 
+ #nav-pc li {
+   list-style: none;
+ }
+ 
+ #nav-pc a {
+   text-decoration: none;
+   margin-left: 20px;
+   color: #0d0d0d;
+   font-weight: bold;
+ }
+ 
+ #nav-pc a:hover {
+   text-decoration: underline;
+ }
+
+ /* 普段（PC表示時）はスマホ用メニューとボタンを隠しておく */
+ #nav-sp, #menu-sp {
+   display: none;
+ }
+
+/* メインビジュアル（文字を写真の上ではなく、外側に配置） */
+#main-visual {
+  width: 100%;
+}
+
+#main-message {
+  padding: 20px 0; /* 写真の上に重ねず、上に独立させるための余白 */
+}
+
+#main-message h1 {
+  font-size: 28px;
+  margin: 0 0 10px 0;
+  color: #0d0d0d;
+}
+
+#main-message p {
+  font-size: 16px;
+  margin: 0;
+  color: #0d0d0d;
+}
+
+#main-visual img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* スマートフォン用スタイル（768px以下） */
+@media screen and (max-width: 768px) {
+  /* PC用ナビを非表示にする */
+  #nav-pc {
+    display: none;
+  }
+
+  /* スマホ用ハンバーガーメニューボタンを表示する */
+  #menu-sp {
+    display: block;
+    float: right;
+    cursor: pointer;
+    width: 30px;
+  }
+
+  /* スマホ用ナビゲーションの初期設定（隠しておく） */
+  #nav-sp {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #c28135; /* お手本のスマホメニュー背景色に合わせた茶系 */
+    z-index: 100;
+  }
+
+  #close {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    width: 30px;
+    cursor: pointer;
+  }
+
+  #nav-sp > nav {
+    margin-top: 80px;
+  }
+
+  #nav-sp ul {
+    padding-left: 0;
+    text-align: center;
+  }
+
+  #nav-sp li {
+    list-style: none;
+    margin: 20px 0;
+  }
+
+  #nav-sp a {
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 18px;
+  }
+
+  #logo-sp img {
+    width: 120px;
+  }
+}
