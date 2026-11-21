@@ -1,0 +1,158 @@
+/* 共通・PC向け基本スタイル */
+body {
+  margin: 0;
+  font-family: sans-serif;
+  color: #333333;
+  background-color: #ffffff;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 24px;
+}
+
+#logo-pc img {
+  display: block;
+  height: 32px;
+}
+
+#nav-pc {
+  display: flex;
+  gap: 24px;
+}
+
+#nav-pc a {
+  text-decoration: none;
+  color: #333333;
+  font-size: 14px;
+  letter-spacing: 0.08em;
+}
+
+#main-visual {
+  padding: 16px 24px 40px;
+}
+
+#main-visual h1 {
+  margin: 16px 0 6px;
+  font-size: 24px;
+}
+
+#main-visual p {
+  margin: 0 0 20px;
+  font-size: 14px;
+}
+
+#main-visual img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+/* PC画面幅のときにSP用要素を非表示 */
+@media screen and (min-width: 768px) {
+  #menu-sp,
+  #nav-sp {
+    display: none;
+  }
+}
+
+/* スマホ画面幅（767px以下）のレイアウト */
+@media screen and (max-width: 767px) {
+  body {
+    min-width: 375px;
+    margin: 0;
+  }
+
+  header {
+    padding: 0 0 0 16px;
+  }
+
+  /* PCのナビゲーションを非表示に */
+  #nav-pc {
+    display: none;
+  }
+
+  /* ハンバーガーメニュー */
+  #menu-sp {
+    float: right;
+    padding: 0;
+    cursor: pointer;
+  }
+
+  /* スマホ用ナビゲーション */
+  #nav-sp {
+    background-color: #ce933e;
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    display: none;
+    z-index: 100;
+  }
+
+  #nav-sp ul {
+    padding-left: 0;
+    margin: 0;
+  }
+
+  #nav-sp li {
+    list-style: none;
+  }
+
+  /* ×ボタン */
+  #close {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    cursor: pointer;
+  }
+
+  /* ナビゲーションメニュー用ロゴ */
+  #logo-sp {
+    margin: 80px 0 30px 20px;
+  }
+
+  #nav-sp a {
+    display: block;
+  }
+
+  #nav-sp a:link {
+    color: #ffffff;
+  }
+
+  #nav-sp a:visited {
+    color: #ffffff;
+  }
+
+  #nav-sp a:hover {
+    color: #ffffff;
+    text-decoration: underline;
+  }
+
+  #nav-sp a:active {
+    color: #ffffff;
+  }
+
+  #nav-sp .menu {
+    text-decoration: none;
+    display: block;
+    margin: 0 20px;
+    height: 44px;
+    font-size: 16px;
+    background-image: url("images/arrow.png");
+    background-repeat: no-repeat;
+    background-position: right top;
+  }
+
+  #main-visual {
+    padding: 16px 0 24px;
+  }
+
+  #main-visual h1,
+  #main-visual p {
+    padding: 0 16px;
+  }
+}
